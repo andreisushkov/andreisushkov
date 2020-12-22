@@ -1,0 +1,154 @@
+package lesson_6;
+
+abstract class Animal {
+    protected String name;
+    public int run;
+
+
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public Animal() {
+
+    }
+
+
+    public void Info (){
+
+    }
+}
+
+
+
+package lesson_6;
+
+class Dog extends Animal {
+    public double jump;
+    public int sweem;
+
+
+
+
+
+    public Dog(String name, int run,int sweem, double jump) {
+        super(name);
+        this.jump = jump;
+        this.sweem = sweem;
+        this.run = run;
+
+
+    }
+
+     void run () {
+        if (run == 500) {
+            System.out.println("run: true");
+        } else {
+            System.out.println("run: false");
+        }
+    }
+
+    void jump () {
+        if (jump == 0.5) {
+            System.out.println("true");
+        }else {
+            System.out.println("false");
+        }
+    }
+
+    void sweem() {
+        if (sweem == 10) {
+            System.out.println("sweem: true");
+        } else {
+            System.out.println("false");
+        }
+    }
+
+
+
+
+    @Override
+    public  void Info() {
+        System.out.println("Dog_name: " + name + " run:"  + run + " jump:" + jump + " sweem " + sweem);
+
+    }
+
+
+
+
+}
+
+
+package lesson_6;
+
+
+
+class Cat extends Animal {
+    public int jump;
+    public boolean sweem;
+
+
+
+
+    public Cat(String name, int run,boolean sweem,int jump) {
+        super(name);
+        this.jump = jump;
+        this.sweem = sweem;
+        this.run = run;
+
+
+    }
+
+    void run () {
+        if (run == 200) {
+            System.out.println("run: true");
+        } else {
+            System.out.println(" run: false");
+        }
+    }
+
+        void jump () {
+            if (jump == 2) {
+                System.out.println("jump: true");
+            }else {
+                System.out.println("jump: false");
+            }
+        }
+
+        void sweem() {
+            System.out.println("sweem: false");
+        }
+
+
+    @Override
+    public  void Info() {
+        System.out.println("Cat_name: " + name + " run: " + run + " jump: " + jump + " sweem: " + sweem);
+
+    }
+
+    }
+
+
+package lesson_6;
+
+public class Main {
+    public static void main(String[] args) {
+        Cat cat = new Cat("COco", 200, false,2 );
+        cat.Info();
+
+
+
+
+        Dog dog = new Dog("Bozman",500, 10, 0.5);
+        dog.Info();
+
+
+
+    }
+
+
+
+
+
+}
